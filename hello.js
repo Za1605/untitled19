@@ -38,3 +38,33 @@ console.log(k);
 let l = false;
 console.log(l);
 
+//Створити 3 змінних firstName, middleName, lastName, наповнити їх своїм ПІБ. З'єднати їх в одну змінну person (Не об'єкт, просто за допомоги конкатенації)
+
+let firstName = 'Yuliia'
+let middleName = 'Vasylyvna'
+let lastName = 'Timchenko'
+
+console.log(firstName, '' , middleName, '' , lastName);
+//За допомогою оператора typeof визначити типи наступних змінних та вивести їх в консоль.
+// let a = 100; let b = '100'; let c = true;
+let a1 = 100;
+console.log(typeof a1);
+
+let b1 = '100';
+console.log(typeof b1);
+
+
+let c1 = true;
+console.log(typeof c1);
+
+
+//Додаткове для тих хто цікавився prompt`oм
+//За допомогою 3х різних prompt() отримати 3 слова які являються вашими Імям, По-Батькові та роками. та вивести в консоль
+let name1 = prompt('What is you name?');
+console.log(name1);
+
+let midName = prompt('You middleName is...');
+console.log(midName);
+
+let lasNam = prompt('You lastname is...');
+console.log(lasNam);
