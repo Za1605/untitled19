@@ -176,4 +176,38 @@ else  {
 
    // - є змінна х, яка може прийняти будь-яке значення (стрінг, число, undefined, null  і тд включно). Напишіть код який,
     //    за допомоги  оператора || буде присвоювати змінній х значення "default"  якщо значення змінної х являється falsy (хибноподібні, тобто приводиться до false)
+const xxxxx = 'jjj';
+if (xxxxx === ''|| xxxxx === null  || xxxxx === undefined ){
+    console.log('Good')
+}
+else {
+    console.log('default')
+}
 
+//     - з файлу arrays.js (лежить в папці 2023 plan ) взяти масив coursesAndDurationArray.
+//     За допомоги іф перевірити кожен його елемент на тривалість навчання.
+//     У випадку якщо тривалість довша за 5 місяців вивести в консоль "Супер".
+
+let array = [
+    {title: 'JavaScript Complex', monthDuration: 5},
+    {title: 'Java Complex', monthDuration: 6},
+    {title: 'Python Complex', monthDuration: 6},
+    {title: 'QA Complex', monthDuration: 4},
+    {title: 'FullStack', monthDuration: 7},
+    {title: 'Frontend', monthDuration: 4}
+];
+
+if (array[0].monthDuration>=5){
+    console.log('Well')
+}
+   if (array[1].monthDuration>=5)
+{
+    console.log('Well')
+}
+    if(array[2].monthDuration>= 5)
+    {
+    console.log('Well')
+}
+else {
+    console.log('Bad')
+}
