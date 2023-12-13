@@ -29,13 +29,41 @@ console.log(upper2);
 
 //- Перевести до нижнього регістру настипні стрінгові значення
 //'HELLO WORLD', 'LOREM IPSUM', 'JAVASCRIPT IS COOL'
+
+let var7 = 'lorem ipsum';
+let upper3 = var7.toLowerCase();
+console.log(upper3);
+
+let var8 = 'HELLO WORLD';
+let upper4 = var8.toLowerCase();
+console.log(upper4);
+
+let var9 = 'HELLO WORLD';
+let upper5 = var9.toLowerCase();
+console.log(upper5);
 //- Є "брудна" стрінга let str = ' dirty string   ' . Почистити її від зайвих пробілів.
+
+let str = ' dirty string   ';
+let dirty1 = str.trim();
+console.log(dirty1);
 
 //- Напишіть функцію stringToarray(str), яка перетворює рядок на масив слів.
     //let str = 'Ревуть воли як ясла повні';
 //let arr = stringToarray(str); ['Ревуть', 'воли', 'як', 'ясла', 'повні']
+let str11 = 'Ревуть воли як ясла повні';
+ const stringToarray  = (str)=> str.split(' ');
+
+ const str12 = stringToarray(str11);
+ console.log(str12);
+
 
 //- є масив чисел [10,8,-7,55,987,-1011,0,1050,0] . за допомоги map  перетворити всі об'єкти в масиві на стрінгові.
+
+let numb = [10,8,-7,55,987,-1011,0,1050,0];
+
+let numb1 = numb.map((num) => num.toString());
+
+console.log(numb1);
 //- створити функцію sortNums(direction), яка прймає масив чисел, та сортує його від більшого до меньшого, або навпаки в залежності від значення аргументу direction.
  //   let nums = [11,21,3];
 //sortNums(nums,'ascending') // [3,11,21]
