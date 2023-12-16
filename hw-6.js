@@ -111,6 +111,13 @@ console.log(arrstudy);
 
 const studLeng = coursesAndDurationArray.filter((item)=> item.monthDuration > 5);
 console.log(studLeng);
+
+
+//-- за допомоги map перетворити кожен елемент на наступний тип {id,title,monthDuration}
+
+const stElem  = coursesAndDurationArray.map((item, index)=> ({...item,id:index +1}));
+console.log(stElem);
+
   //  описати колоду карт (від 6 до туза без джокерів)
 //- знайти піковий туз
 //- всі шістки
@@ -118,12 +125,68 @@ console.log(studLeng);
 //- всі буби
 //- всі трефи від 9 та більше
 
-//{
-   // cardSuit: '', // 'spade', 'diamond','heart', 'clubs'
-     //   value: '', // '6'-'10', 'ace','jack','queen','king','joker'
-    //color:'', // 'red','black'
-//}
 
+const cards = [
+ {cardSuit: 'spades', value: '6', color: 'black'},
+ {cardSuit: 'spades', value: '7', color: 'black'},
+ {cardSuit: 'spades', value: '8', color: 'black'},
+ {cardSuit: 'spades', value: '9', color: 'black'},
+ {cardSuit: 'spades', value: '10', color: 'black'},
+ {cardSuit: 'spades', value: 'ace', color: 'black'},
+ {cardSuit: 'spades', value: 'jack', color: 'black'},
+ {cardSuit: 'spades', value: 'queen', color: 'black'},
+ {cardSuit: 'spades', value: 'king', color: 'black'},
+ {cardSuit: 'clubs', value: '6', color: 'black'},
+ {cardSuit: 'clubs', value: '7', color: 'black'},
+ {cardSuit: 'clubs', value: '8', color: 'black'},
+ {cardSuit: 'clubs', value: '9', color: 'black'},
+ {cardSuit: 'clubs', value: '10', color: 'black'},
+ {cardSuit: 'clubs', value: 'ace', color: 'black'},
+ {cardSuit: 'clubs', value: 'jack', color: 'black'},
+ {cardSuit: 'clubs', value: 'queen', color: 'black'},
+ {cardSuit: 'clubs', value: 'king', color: 'black'},
+ {cardSuit: 'hearts', value: '6', color: 'red'},
+ {cardSuit: 'hearts', value: '7', color: 'red'},
+ {cardSuit: 'hearts', value: '8', color: 'red'},
+ {cardSuit: 'hearts', value: '9', color: 'red'},
+ {cardSuit: 'hearts', value: '10', color: 'red'},
+ {cardSuit: 'hearts', value: 'ace', color: 'red'},
+ {cardSuit: 'hearts', value: 'jack', color: 'red'},
+ {cardSuit: 'hearts', value: 'queen', color: 'red'},
+ {cardSuit: 'hearts', value: 'king', color: 'red'},
+ {cardSuit: 'diamonds', value: '6', color: 'red'},
+ {cardSuit: 'diamonds', value: '7', color: 'red'},
+ {cardSuit: 'diamonds', value: '8', color: 'red'},
+ {cardSuit: 'diamonds', value: '9', color: 'red'},
+ {cardSuit: 'diamonds', value: '10', color: 'red'},
+ {cardSuit: 'diamonds', value: 'ace', color: 'red'},
+ {cardSuit: 'diamonds', value: 'jack', color: 'red'},
+ {cardSuit: 'diamonds', value: 'queen', color: 'red'},
+ {cardSuit: 'diamonds', value: 'king', color: 'red'},
+ {cardSuit: 'fdgdfgfhgh', value: 'gfggfggg', color: 'ggggggghhh'}
+];
+//- знайти піковий туз
+
+const spaseAce = cards.filter((item) =>item.cardSuit === 'spades' && item.value === 'ace');
+console.log(spaseAce);
+
+//- всі шістки
+
+const sixValu = cards.filter((value) => value.value === '6');
+console.log(sixValu);
+
+//- всі червоні карти
+const redKard = cards.filter((value) => value.color === 'red')
+console.log(redKard);
+
+//- всі буби
+
+const buBu = cards.filter((value)=> value.cardSuit=== 'diamonds')
+console.log(buBu);
+
+//- всі трефи від 9 та більше
+const card5 = cards.filter((card) => ['9', '10','ace', 'jack','queen', 'king'].includes(card.value) && card.cardSuit ==='clubs');
+console.log(card5);
 
 
    // Взяти описану колоду карт, та за допомоги reduce упакувати всі карти по "мастях" в об'єкт
@@ -133,6 +196,29 @@ console.log(studLeng);
    // hearts:[],
     //clubs:[]
 //}
+let reduse = cards.reduce((accumulator, card)=>{
+ if (card.cardSuit === 'spades'){
+    accumulator[0].push(card);
+ }
+ else if (card.cardSuit === 'clubs') {
+  accumulator[1].push(card);
+ }
+
+ else if (card.cardSuit === 'hearts'){
+  accumulator[2].push(card);
+ }
+
+ else if (card.cardSuit === 'diamonds'){
+  accumulator[3].push(card);
+ }
+ else {
+  console.log('error')
+ }
+
+ return accumulator;
+},[[],[],[],[]]);
+console.log(reduse);
+
 
   //  взяти з arrays.js (який лежить в папці 2023 plan) масив coursesArray
 //--написати пошук всіх об'єктів, в який в modules є sass
