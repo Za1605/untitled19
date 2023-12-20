@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<form name = "userr" class="usButt">
+    <label>name : <input type="text" name="name"></label>
+    <label>surname: <input type="text" name="surname"></label>
+    <label>age : <input type="number" name="age"></label>
+    <br>
+    <button> User</button>
+
+</form>
+
+<script>
+
+    const usForm = document.forms.creator;
+    usForm.onsubmit = function (e) {
+        e.preventDefault();
+        const usForm1 = document.createElement('div');
+        const name = document.createElement('div');
+        const surname = document.createElement('div');
+        const age = document.createElement('div');
+
+        name.innerText = this.name.value;
+        surname.innerText = this.surname.value;
+        age.innerText = this.age.value;
+        this.name.value = '';
+        this.surname.value = '';
+        this.age.value = '';
+
+        usForm1.append(name, surname,age);
+        document.body.appendChild(usForm1);
+
+
+
+
+    }
+
+</script>
+
+
+
+
+
+
+
+</body>
+</html>

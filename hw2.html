@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2> Number1: <b id = "number"></b> </h2>
+<script>
+const number11 = localStorage.getItem(`number`) || 1;
+const block = document.getElementById(`number`);
+const newNumber = number11 +2 ;
+block.innerText = newNumber;
+localStorage.setItem(`number`, newNumber
+);
+</script>
+</body>
+</html>
