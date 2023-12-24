@@ -116,7 +116,18 @@ console.log(car1);
 //-- increaseMaxSpeed (newSpeed) - яка підвищує значення максимальної швидкості на значення newSpeed
 //-- changeYear (newValue) - змінює рік випуску на значення newValue
 //-- addDriver (driver) - приймає об'єкт який "водій" з довільним набором полів, і додає його в поточний об'єкт car
-
+class Car2 {
+    constructor(model, producer, year, maxSpeed, volume) {
+        this.model = model;
+        this.producer = producer;
+        this.year = year;
+        this.maxSpeed = maxSpeed;
+        this.volume = volume;
+    }
+    drive(){
+        console.log(`їдумо зі швидкістю ${this.maxSpeed} на годину`)
+    }
+}
 
 
 //-створити класс/функцію конструктор попелюшка з полями ім'я, вік, розмір ноги. Створити масив з 10 попелюшок.
