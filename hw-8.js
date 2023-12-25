@@ -127,7 +127,36 @@ class Car2 {
     drive(){
         console.log(`їдумо зі швидкістю ${this.maxSpeed} на годину`)
     }
+  info(){
+          console.log('------------ INFO ------------');
+          console.log('model : ', this.model);
+          console.log('producer : ', this.producer);
+          console.log('year : ', this.year);
+          console.log('maxSpeed : ', this.maxSpeed);
+          console.log('volume : ', this.volume);
+          console.log('driver : ', this.driver);
+          console.log('------------ INFO ------------');
+  }
+
+    increaseMaxSpeed (newSpeed){
+    this.maxSpeed+=newSpeed;
+    }
+
+    changeYear (newValue){
+        this.year=newValue;
+    }
+
+    addDriver (driver){
+        this.driver = driver;
+    }
 }
+
+const car2 = new Car2('v3', 'ffg', 2000, 200, 4);
+console.log(car2);
+
+
+
+
 
 
 //-створити класс/функцію конструктор попелюшка з полями ім'я, вік, розмір ноги. Створити масив з 10 попелюшок.
