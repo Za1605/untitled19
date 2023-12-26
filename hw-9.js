@@ -24,3 +24,19 @@ document.body.appendChild(blockClone);
 //- Є масив:
 const arr = ['Main', 'Products', 'About us', 'Contacts']
 // Зробити ul в середині якої будуть лежати елементи масиву (кожен в своєму li)
+const ul = document.createElement('ul');
+for (const value of arr) {
+    const li = document.createElement('li');
+    li.innerText = value;
+    ul.appendChild('li');
+}
+document.body.appendChild(ul);
+
+// - Є масив
+// Для кожного елементу масиву зробити блок в якому вивести інформацію про title та monthDuration
+// Завдання робити через цикли.
+// for (const course of coursesAndDurationArray) {
+//     const div = document.createElement('div');
+//     div.innerText = `TITLE: ${course.title} | DURATION: ${course.monthDuration}`
+//     document.body.appendChild(div);
+// }
