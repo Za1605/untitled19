@@ -172,4 +172,103 @@ for (const item of simpsons) {
 // значення окремих властивостей, для властивості modules зробити список з елементами
 // Приклад структири знаходиться у файлі example.png який лежить в папці з поточним фйлом
 
+let coursesArray = [
+    {
+        title: 'JavaScript Complex',
+        monthDuration: 5,
+        hourDuration: 909,
+        modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'react', 'angular', 'aws', 'docker', 'git', 'node.js']
+    },
+    {
+        title: 'Java Complex',
+        monthDuration: 6,
+        hourDuration: 909,
+        modules: ['html',
+            'css',
+            'js',
+            'mysql',
+            'mongodb',
+            'angular',
+            'aws',
+            'docker',
+            'git',
+            'java core',
+            'java advanced']
+    },
+    {
+        title: 'Python Complex',
+        monthDuration: 6,
+        hourDuration: 909,
+        modules: ['html',
+            'css',
+            'js',
+            'mysql',
+            'mongodb',
+            'angular',
+            'aws',
+            'docker',
+            'python core',
+            'python advanced']
+    },
+    {
+        title: 'QA Complex',
+        monthDuration: 4,
+        hourDuration: 909,
+        modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'git', 'QA/QC']
+    },
+    {
+        title: 'FullStack',
+        monthDuration: 7,
+        hourDuration: 909,
+        modules: ['html',
+            'css',
+            'js',
+            'mysql',
+            'mongodb',
+            'react',
+            'angular',
+            'aws',
+            'docker',
+            'git',
+            'node.js',
+            'python',
+            'java']
+    },
+    {
+        title: 'Frontend',
+        monthDuration: 4,
+        hourDuration: 909,
+        modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'react', 'angular', 'aws', 'docker', 'git', 'sass']
+    }
+];
+
+for (const value of coursesArray) {
+    const block = document.createElement('div');
+    const title = document.createElement('h1');
+    const duration = document.createElement('div');
+    const month = document.createElement('div');
+    const hour = document.createElement('div');
+    const ul = document.createElement('ul');
+
+    title.innerText = value.title;
+    month.innerText = value.monthDuration;
+    hour.innerText = value.hourDuration;
+
+    for (const module of value.modules) {
+        const li = document.createElement('li');
+        li.innerText = module;
+        ul.appendChild(li);
+    }
+
+    block.classList.add('main');
+    duration.classList.add('flex');
+    month.classList.add('growM');
+    hour.classList.add('growH');
+
+    duration.append(month,hour);
+     block.append(title,duration,ul);
+     document.body.append(block);
+
+}
+
 
