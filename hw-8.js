@@ -163,3 +163,50 @@ console.log(car2);
 //Сторити об'єкт класу "принц" за допомоги класу який має поля ім'я, вік, туфелька яку він знайшов.
     //За допомоги циклу знайти яка попелюшка повинна бути з принцом.
     //Додатково, знайти необхідну попелюшку за допомоги функції масиву find та відповідного колбек
+
+
+  class Library {
+      constructor() {
+          this.book = [];
+          this.title = title;
+          this.author = author;
+          this.pages = pages;
+          this.ISBN = ISBN;
+      }
+
+      addBook(book){
+          this.book.push(book);
+          console.log(`${book.title} + '' to add `);
+      }
+
+      removeBook(title) {
+          const delBook = this.book.findIndex(book => book.title === title);
+          if (index !== -1) {
+              const removeBooks = this.book.splice(index,1)[0];
+              console.log(`book ${this.title} delete`);
+          } else {
+              console.log(`book ${this.book} is not find`);
+          }
+      }
+           listBook(){
+
+              if (this.book.left === 0){
+              console.log('library is empty');
+              }
+
+          else {
+              console.log('tile of books in library:');
+              this.book.forEach(book => {
+                  console.log(`Name ${book.title}  ${book.author}  ${book.pages}  ${book.ISBN}`);
+              });
+
+          }
+
+      }
+  }
+  const library = new Library();
+
+
+  library.addBook({title:'hohoho', author:'Petro', pages : 344, ISBN: 111});
+
+  library.listBook();
