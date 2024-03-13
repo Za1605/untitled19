@@ -165,48 +165,76 @@ console.log(car2);
     //Додатково, знайти необхідну попелюшку за допомоги функції масиву find та відповідного колбек
 
 
-  class Library {
-      constructor() {
-          this.book = [];
-          this.title = title;
-          this.author = author;
-          this.pages = pages;
-          this.ISBN = ISBN;
-      }
+ //class Library {
+ //    constructor() {
+ //        this.book = [];
+ //        this.title = title;
+ //        this.author = author;
+ //        this.pages = pages;
+ //        this.ISBN = ISBN;
+ //    }
 
-      addBook(book){
-          this.book.push(book);
-          console.log(`${book.title} + '' to add `);
-      }
+ //    addBook(book){
+ //        this.book.push(book);
+ //        console.log(`${book.title} + '' to add `);
+ //    }
 
-      removeBook(title) {
-          const delBook = this.book.findIndex(book => book.title === title);
-          if (index !== -1) {
-              const removeBooks = this.book.splice(index,1)[0];
-              console.log(`book ${this.title} delete`);
-          } else {
-              console.log(`book ${this.book} is not find`);
-          }
-      }
-           listBook(){
+ //    removeBook(title) {
+ //        const delBook = this.book.findIndex(book => book.title === title);
+ //        if (index !== -1) {
+ //            const removeBooks = this.book.splice(index,1)[0];
+ //            console.log(`book ${this.title} delete`);
+ //        } else {
+ //            console.log(`book ${this.book} is not find`);
+ //        }
+ //    }
+ //         listBook(){
 
-              if (this.book.left === 0){
-              console.log('library is empty');
-              }
+ //            if (this.book.left === 0){
+ //            console.log('library is empty');
+ //            }
 
-          else {
-              console.log('tile of books in library:');
-              this.book.forEach(book => {
-                  console.log(`Name ${book.title}  ${book.author}  ${book.pages}  ${book.ISBN}`);
-              });
+  //       else {
+  //           console.log('tile of books in library:');
+  //           this.book.forEach(book => {
+  //               console.log(`Name ${book.title}  ${book.author}  ${book.pages}  ${book.ISBN}`);
+  //           });
 
-          }
+  //       }
 
-      }
-  }
-  const library = new Library();
+  //   }
+  //
+  //const library = new Library();
 
 
-  library.addBook({title:'hohoho', author:'Petro', pages : 344, ISBN: 111});
+  //library.addBook({title:'hohoho', author:'Petro', pages : 344, ISBN: 111});
+//
+  //library.listBook();
 
-  library.listBook();
+  //about shop of elektroniks
+
+class Produkt {
+    constructor(id,names,title) {
+
+        this.id = id;
+        this.name = names;
+        this.title = title;
+
+    }
+}
+
+    class Elektron {
+        constructor(){
+            this.produkts = [];
+        }
+
+
+    addProdukt(produkt){
+        this.produkts.push(produkt);
+        console.log(`${produkt.title} + to add in shop`);
+    }
+
+}
+
+const Laptop = new Produkt(2, 'hohoho', 'jfjfjfjfj');
+console.log(Laptop);
